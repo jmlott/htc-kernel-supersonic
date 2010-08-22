@@ -73,9 +73,9 @@ struct clkctl_acpu_speed {
 #define SRC_PLL1	3 /* 768 MHz */
 
 struct clkctl_acpu_speed acpu_freq_tbl[] = {
-	{  19200, CCTL(CLK_TCXO, 1),		SRC_RAW, 0, 0, 900, 14000}, // 950
-	{ 128000, CCTL(CLK_TCXO, 1),		SRC_AXI, 0, 0, 850, 14000 }, // 950
-	{ 245760, CCTL(CLK_MODEM_PLL, 1),	SRC_RAW, 0, 0, 850, 29000 }, // change vdd to 1000 as evo has issues setting undervolt to 950 or 975
+	{  19200, CCTL(CLK_TCXO, 1),		SRC_RAW, 0, 0, 875, 14000}, // 950
+	{ 128000, CCTL(CLK_TCXO, 1),		SRC_AXI, 0, 0, 875, 14000 }, // 950
+	{ 245760, CCTL(CLK_MODEM_PLL, 1),	SRC_RAW, 0, 0, 875, 29000 }, // change vdd to 1000 as evo has issues setting undervolt to 950 or 975
 	/* Work arround for acpu resume hung, GPLL is turn off by arm9 */
 	/*{ 256000, CCTL(CLK_GLOBAL_PLL, 3),	SRC_RAW, 0, 0, 950, 29000 },*/
 	{ 384000, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x0A, 0, 875, 58000 }, // 975
@@ -95,11 +95,11 @@ struct clkctl_acpu_speed acpu_freq_tbl[] = {
 	{ 921600, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x18, 0, 1225, 128000 }, // 1300
 	{ 960000, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x19, 0, 1225, 128000 }, // 1300 
 	{ 998400, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1A, 0, 1250, 128000 }, // 1300
-	{ 1036800, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1B, 0, 1300, 128000 },
-	{ 1075200, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1C, 0, 1300, 128000 },
-	{ 1113600, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1D, 0, 1300, 128000 },
+	{ 1036800, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1B, 0, 1275, 128000 },
+	{ 1075200, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1C, 0, 1275, 128000 },
+	{ 1113600, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1D, 0, 1275, 128000 },
 	/* Note: Max safe frequency for most Nexus Ones is ~1.1136-1.1152 */
-	{ 1152000, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1E, 0, 1300, 128000 },
+	{ 1152000, CCTL(CLK_TCXO, 1),		SRC_SCPLL, 0x1E, 0, 1275, 128000 },
 	{ 0 },
 };
 
